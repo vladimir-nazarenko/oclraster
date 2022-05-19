@@ -7,7 +7,9 @@ conan_basic_setup()
 set (CMAKE_CXX_STANDARD 14)
 
 set (SOURCES
-		main.cpp)
+		main.cpp
+		util/cl_engine.cpp
+		util/cl_engine.h util/config.cpp util/config.h util/rassert.h)
 
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} ${SOURCES})
 target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
